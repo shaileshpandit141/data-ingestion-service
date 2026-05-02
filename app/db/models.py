@@ -5,6 +5,8 @@ from sqlalchemy import (
     JSON,
     DateTime,
     Index,
+    Integer,
+    PrimaryKeyConstraint,
     String,
 )
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column
@@ -30,4 +32,28 @@ class Event(BaseModel):
     __table_args__ = (
         Index("idx_events_tenant_time", "tenant_id", "timestamp"),
         Index("idx_events_filters", "tenant_id", "source", "event_type"),
+    )
+
+
+class Aggregate(BaseModel):
+    __tablename__ = "aggregates"
+
+    tenant_id: Mapped[str] = mapped_column(String)
+    bucket_start: Mapped[datetime] = mapped_column(DateTime)
+    bucket_size: Mapped[str] = mapped_column(String)  # minute/hour
+    source: Mapped[str] = mapped_column(String)
+    event_type: Mapped[str] = mapped_column(String)
+
+    count: Mapped[int] = mapped_column(Integer)
+    first_seen: Mapped[datetime] = mapped_column(DateTime)
+    last_seen: Mapped[datetime] = mapped_column(DateTime)
+
+    __table_args__ = (
+        PrimaryKeyConstraint(
+            "tenant_id",
+            "bucket_start",
+            "bucket_size",
+            "source",
+            "event_type",
+        ),
     )
