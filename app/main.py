@@ -26,3 +26,8 @@ app.add_middleware(
 @app.get(path="/", include_in_schema=False)
 def root(request: Request) -> RedirectResponse:
     return RedirectResponse(url="/docs", status_code=307)
+
+
+@app.get("/health")
+async def health() -> dict[str, str]:
+    return {"status": "ok"}
