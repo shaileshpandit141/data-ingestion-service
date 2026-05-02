@@ -1,7 +1,7 @@
 from datetime import UTC, datetime
 from typing import Any
 
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 
 
 class EventCreate(BaseModel):
@@ -17,3 +17,7 @@ class EventCreate(BaseModel):
         if self.timestamp.tzinfo is None:
             raise ValueError("timestamp must be timezone-aware (UTC required)")
         return self.timestamp.astimezone(UTC)
+
+
+class BulkEventCreate(BaseModel):
+    events: list[EventCreate] = Field(..., min_length=1, max_length=5000)
