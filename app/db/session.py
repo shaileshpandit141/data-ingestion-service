@@ -1,6 +1,6 @@
 from collections.abc import AsyncGenerator, Generator
 
-from sqlalchemy import create_engine
+from sqlalchemy import create_engine, text
 from sqlalchemy.ext.asyncio import AsyncSession, async_sessionmaker, create_async_engine
 from sqlalchemy.orm import Session, sessionmaker
 
@@ -57,3 +57,8 @@ async def get_async_session() -> AsyncGenerator[AsyncSession]:
 def get_sync_session() -> Generator[Session]:
     with SyncSessionLocal() as session:
         yield session
+
+
+async def check_db() -> None:
+    async with async_engine.connect() as conn:
+        await conn.execute(text("SELECT 1"))
