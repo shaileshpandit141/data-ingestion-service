@@ -1,0 +1,402 @@
+[
+  {
+    "event_id": "evt_1",
+    "tenant_id": "tenant_2",
+    "source": "web",
+    "event_type": "click",
+    "timestamp": "2026-05-02T10:00:00Z",
+    "payload": { "value": 85, "meta": "sample_1" }
+  },
+  {
+    "event_id": "evt_2",
+    "tenant_id": "tenant_1",
+    "source": "api",
+    "event_type": "click",
+    "timestamp": "2026-05-02T10:01:00Z",
+    "payload": { "value": 93, "meta": "sample_2" }
+  },
+  {
+    "event_id": "evt_3",
+    "tenant_id": "tenant_1",
+    "source": "api",
+    "event_type": "update",
+    "timestamp": "2026-05-02T10:02:00Z",
+    "payload": { "value": 19, "meta": "sample_3" }
+  },
+  {
+    "event_id": "evt_4",
+    "tenant_id": "tenant_2",
+    "source": "api",
+    "event_type": "create",
+    "timestamp": "2026-05-02T10:03:00Z",
+    "payload": { "value": 91, "meta": "sample_4" }
+  },
+  {
+    "event_id": "evt_5",
+    "tenant_id": "tenant_3",
+    "source": "web",
+    "event_type": "create",
+    "timestamp": "2026-05-02T10:04:00Z",
+    "payload": { "value": 68, "meta": "sample_5" }
+  },
+  {
+    "event_id": "evt_6",
+    "tenant_id": "tenant_2",
+    "source": "api",
+    "event_type": "view",
+    "timestamp": "2026-05-02T10:05:00Z",
+    "payload": { "value": 93, "meta": "sample_6" }
+  },
+  {
+    "event_id": "evt_7",
+    "tenant_id": "tenant_2",
+    "source": "api",
+    "event_type": "create",
+    "timestamp": "2026-05-02T10:06:00Z",
+    "payload": { "value": 47, "meta": "sample_7" }
+  },
+  {
+    "event_id": "evt_8",
+    "tenant_id": "tenant_2",
+    "source": "mobile",
+    "event_type": "update",
+    "timestamp": "2026-05-02T10:07:00Z",
+    "payload": { "value": 44, "meta": "sample_8" }
+  },
+  {
+    "event_id": "evt_9",
+    "tenant_id": "tenant_1",
+    "source": "api",
+    "event_type": "update",
+    "timestamp": "2026-05-02T10:08:00Z",
+    "payload": { "value": 45, "meta": "sample_9" }
+  },
+  {
+    "event_id": "evt_10",
+    "tenant_id": "tenant_3",
+    "source": "api",
+    "event_type": "click",
+    "timestamp": "2026-05-02T10:09:00Z",
+    "payload": { "value": 19, "meta": "sample_10" }
+  },
+  {
+    "event_id": "evt_11",
+    "tenant_id": "tenant_2",
+    "source": "mobile",
+    "event_type": "update",
+    "timestamp": "2026-05-02T10:10:00Z",
+    "payload": { "value": 48, "meta": "sample_11" }
+  },
+  {
+    "event_id": "evt_12",
+    "tenant_id": "tenant_3",
+    "source": "web",
+    "event_type": "view",
+    "timestamp": "2026-05-02T10:11:00Z",
+    "payload": { "value": 62, "meta": "sample_12" }
+  },
+  {
+    "event_id": "evt_13",
+    "tenant_id": "tenant_2",
+    "source": "web",
+    "event_type": "click",
+    "timestamp": "2026-05-02T10:12:00Z",
+    "payload": { "value": 90, "meta": "sample_13" }
+  },
+  {
+    "event_id": "evt_14",
+    "tenant_id": "tenant_3",
+    "source": "web",
+    "event_type": "view",
+    "timestamp": "2026-05-02T10:13:00Z",
+    "payload": { "value": 49, "meta": "sample_14" }
+  },
+  {
+    "event_id": "evt_15",
+    "tenant_id": "tenant_1",
+    "source": "api",
+    "event_type": "create",
+    "timestamp": "2026-05-02T10:14:00Z",
+    "payload": { "value": 36, "meta": "sample_15" }
+  },
+  {
+    "event_id": "evt_16",
+    "tenant_id": "tenant_1",
+    "source": "web",
+    "event_type": "view",
+    "timestamp": "2026-05-02T10:15:00Z",
+    "payload": { "value": 8, "meta": "sample_16" }
+  },
+  {
+    "event_id": "evt_17",
+    "tenant_id": "tenant_1",
+    "source": "mobile",
+    "event_type": "view",
+    "timestamp": "2026-05-02T10:16:00Z",
+    "payload": { "value": 50, "meta": "sample_17" }
+  },
+  {
+    "event_id": "evt_18",
+    "tenant_id": "tenant_1",
+    "source": "web",
+    "event_type": "view",
+    "timestamp": "2026-05-02T10:17:00Z",
+    "payload": { "value": 63, "meta": "sample_18" }
+  },
+  {
+    "event_id": "evt_19",
+    "tenant_id": "tenant_1",
+    "source": "api",
+    "event_type": "click",
+    "timestamp": "2026-05-02T10:18:00Z",
+    "payload": { "value": 29, "meta": "sample_19" }
+  },
+  {
+    "event_id": "evt_20",
+    "tenant_id": "tenant_3",
+    "source": "mobile",
+    "event_type": "view",
+    "timestamp": "2026-05-02T10:19:00Z",
+    "payload": { "value": 12, "meta": "sample_20" }
+  },
+  {
+    "event_id": "evt_21",
+    "tenant_id": "tenant_3",
+    "source": "web",
+    "event_type": "create",
+    "timestamp": "2026-05-02T10:20:00Z",
+    "payload": { "value": 64, "meta": "sample_21" }
+  },
+  {
+    "event_id": "evt_22",
+    "tenant_id": "tenant_3",
+    "source": "mobile",
+    "event_type": "update",
+    "timestamp": "2026-05-02T10:21:00Z",
+    "payload": { "value": 46, "meta": "sample_22" }
+  },
+  {
+    "event_id": "evt_23",
+    "tenant_id": "tenant_3",
+    "source": "mobile",
+    "event_type": "view",
+    "timestamp": "2026-05-02T10:22:00Z",
+    "payload": { "value": 21, "meta": "sample_23" }
+  },
+  {
+    "event_id": "evt_24",
+    "tenant_id": "tenant_2",
+    "source": "web",
+    "event_type": "click",
+    "timestamp": "2026-05-02T10:23:00Z",
+    "payload": { "value": 16, "meta": "sample_24" }
+  },
+  {
+    "event_id": "evt_25",
+    "tenant_id": "tenant_1",
+    "source": "api",
+    "event_type": "view",
+    "timestamp": "2026-05-02T10:24:00Z",
+    "payload": { "value": 21, "meta": "sample_25" }
+  },
+  {
+    "event_id": "evt_26",
+    "tenant_id": "tenant_2",
+    "source": "mobile",
+    "event_type": "create",
+    "timestamp": "2026-05-02T10:25:00Z",
+    "payload": { "value": 85, "meta": "sample_26" }
+  },
+  {
+    "event_id": "evt_27",
+    "tenant_id": "tenant_1",
+    "source": "mobile",
+    "event_type": "update",
+    "timestamp": "2026-05-02T10:26:00Z",
+    "payload": { "value": 16, "meta": "sample_27" }
+  },
+  {
+    "event_id": "evt_28",
+    "tenant_id": "tenant_2",
+    "source": "mobile",
+    "event_type": "view",
+    "timestamp": "2026-05-02T10:27:00Z",
+    "payload": { "value": 80, "meta": "sample_28" }
+  },
+  {
+    "event_id": "evt_29",
+    "tenant_id": "tenant_1",
+    "source": "api",
+    "event_type": "update",
+    "timestamp": "2026-05-02T10:28:00Z",
+    "payload": { "value": 8, "meta": "sample_29" }
+  },
+  {
+    "event_id": "evt_30",
+    "tenant_id": "tenant_1",
+    "source": "web",
+    "event_type": "update",
+    "timestamp": "2026-05-02T10:29:00Z",
+    "payload": { "value": 56, "meta": "sample_30" }
+  },
+  {
+    "event_id": "evt_31",
+    "tenant_id": "tenant_3",
+    "source": "api",
+    "event_type": "create",
+    "timestamp": "2026-05-02T10:30:00Z",
+    "payload": { "value": 13, "meta": "sample_31" }
+  },
+  {
+    "event_id": "evt_32",
+    "tenant_id": "tenant_2",
+    "source": "mobile",
+    "event_type": "click",
+    "timestamp": "2026-05-02T10:31:00Z",
+    "payload": { "value": 70, "meta": "sample_32" }
+  },
+  {
+    "event_id": "evt_33",
+    "tenant_id": "tenant_3",
+    "source": "web",
+    "event_type": "update",
+    "timestamp": "2026-05-02T10:32:00Z",
+    "payload": { "value": 53, "meta": "sample_33" }
+  },
+  {
+    "event_id": "evt_34",
+    "tenant_id": "tenant_2",
+    "source": "mobile",
+    "event_type": "create",
+    "timestamp": "2026-05-02T10:33:00Z",
+    "payload": { "value": 100, "meta": "sample_34" }
+  },
+  {
+    "event_id": "evt_35",
+    "tenant_id": "tenant_1",
+    "source": "mobile",
+    "event_type": "update",
+    "timestamp": "2026-05-02T10:34:00Z",
+    "payload": { "value": 36, "meta": "sample_35" }
+  },
+  {
+    "event_id": "evt_36",
+    "tenant_id": "tenant_1",
+    "source": "web",
+    "event_type": "view",
+    "timestamp": "2026-05-02T10:35:00Z",
+    "payload": { "value": 41, "meta": "sample_36" }
+  },
+  {
+    "event_id": "evt_37",
+    "tenant_id": "tenant_1",
+    "source": "mobile",
+    "event_type": "view",
+    "timestamp": "2026-05-02T10:36:00Z",
+    "payload": { "value": 38, "meta": "sample_37" }
+  },
+  {
+    "event_id": "evt_38",
+    "tenant_id": "tenant_3",
+    "source": "mobile",
+    "event_type": "view",
+    "timestamp": "2026-05-02T10:37:00Z",
+    "payload": { "value": 4, "meta": "sample_38" }
+  },
+  {
+    "event_id": "evt_39",
+    "tenant_id": "tenant_1",
+    "source": "mobile",
+    "event_type": "create",
+    "timestamp": "2026-05-02T10:38:00Z",
+    "payload": { "value": 71, "meta": "sample_39" }
+  },
+  {
+    "event_id": "evt_40",
+    "tenant_id": "tenant_1",
+    "source": "web",
+    "event_type": "view",
+    "timestamp": "2026-05-02T10:39:00Z",
+    "payload": { "value": 26, "meta": "sample_40" }
+  },
+  {
+    "event_id": "evt_41",
+    "tenant_id": "tenant_1",
+    "source": "mobile",
+    "event_type": "view",
+    "timestamp": "2026-05-02T10:40:00Z",
+    "payload": { "value": 52, "meta": "sample_41" }
+  },
+  {
+    "event_id": "evt_42",
+    "tenant_id": "tenant_2",
+    "source": "web",
+    "event_type": "update",
+    "timestamp": "2026-05-02T10:41:00Z",
+    "payload": { "value": 59, "meta": "sample_42" }
+  },
+  {
+    "event_id": "evt_43",
+    "tenant_id": "tenant_1",
+    "source": "mobile",
+    "event_type": "click",
+    "timestamp": "2026-05-02T10:42:00Z",
+    "payload": { "value": 51, "meta": "sample_43" }
+  },
+  {
+    "event_id": "evt_44",
+    "tenant_id": "tenant_1",
+    "source": "mobile",
+    "event_type": "update",
+    "timestamp": "2026-05-02T10:43:00Z",
+    "payload": { "value": 77, "meta": "sample_44" }
+  },
+  {
+    "event_id": "evt_45",
+    "tenant_id": "tenant_3",
+    "source": "web",
+    "event_type": "update",
+    "timestamp": "2026-05-02T10:44:00Z",
+    "payload": { "value": 33, "meta": "sample_45" }
+  },
+  {
+    "event_id": "evt_46",
+    "tenant_id": "tenant_1",
+    "source": "web",
+    "event_type": "create",
+    "timestamp": "2026-05-02T10:45:00Z",
+    "payload": { "value": 52, "meta": "sample_46" }
+  },
+  {
+    "event_id": "evt_47",
+    "tenant_id": "tenant_2",
+    "source": "mobile",
+    "event_type": "update",
+    "timestamp": "2026-05-02T10:46:00Z",
+    "payload": { "value": 90, "meta": "sample_47" }
+  },
+  {
+    "event_id": "evt_48",
+    "tenant_id": "tenant_2",
+    "source": "web",
+    "event_type": "view",
+    "timestamp": "2026-05-02T10:47:00Z",
+    "payload": { "value": 50, "meta": "sample_48" }
+  },
+  {
+    "event_id": "evt_49",
+    "tenant_id": "tenant_1",
+    "source": "web",
+    "event_type": "create",
+    "timestamp": "2026-05-02T10:48:00Z",
+    "payload": { "value": 67, "meta": "sample_49" }
+  },
+  {
+    "event_id": "evt_50",
+    "tenant_id": "tenant_2",
+    "source": "mobile",
+    "event_type": "click",
+    "timestamp": "2026-05-02T10:49:00Z",
+    "payload": { "value": 50, "meta": "sample_50" }
+  }
+]
