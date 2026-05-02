@@ -66,11 +66,12 @@ indent-style = "space"
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
-addopts = "-q --strict-markers --cov=src"
+addopts = "-q --strict-markers --cov=app"
 
 
 [tool.coverage.run]
-source = ["src"]
+branch = true
+source = ["app"]
 
 [tool.coverage.report]
 show_missing = true
