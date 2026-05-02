@@ -32,3 +32,15 @@ class EventQueryParams(BaseModel):
 
     limit: int = Field(50, le=100)
     offset: int = 0
+
+
+class EventResponse(BaseModel):
+    event_id: str
+    tenant_id: str
+    source: str | None
+    event_type: str | None
+    payload: dict[str, Any] | None
+    timestamp: datetime
+
+    class Config:
+        from_attributes = True

@@ -1,11 +1,18 @@
+from collections.abc import Sequence
 from typing import Annotated, Any
 
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.db.session import get_async_session
-from app.schemas.event import BulkEventCreate, EventCreate
+from app.schemas.event import (
+    BulkEventCreate,
+    EventCreate,
+    EventQueryParams,
+    EventResponse,
+)
 from app.services.ingestion import bulk_insert_events, insert_event
+from app.services.query import get_events
 
 router = APIRouter()
 
@@ -41,3 +48,16 @@ async def bulk_create_events(
 
     except ValueError as exc:
         raise HTTPException(status_code=400, detail=str(exc)) from exc
+
+
+@router.get("/events")
+async def list_events(
+    params: Annotated[EventQueryParams, Depends()],
+    db: Annotated[AsyncSession, Depends(get_async_session)],
+) -> dict[str, int | Sequence[EventResponse]]:
+    events = await get_events(db, params)
+
+    return {
+        "count": len(events),
+        "items": events,  # type: ignore
+    }
