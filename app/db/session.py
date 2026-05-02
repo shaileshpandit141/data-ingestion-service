@@ -6,7 +6,7 @@ from sqlalchemy.orm import Session, sessionmaker
 
 from app.core.config import get_settings
 
-from .models import BaseDeclarativeModel
+from .models import BaseModel
 
 settings = get_settings()
 
@@ -41,12 +41,12 @@ SyncSessionLocal = sessionmaker(
 
 async def init_async_db() -> None:
     async with async_engine.begin() as conn:
-        await conn.run_sync(BaseDeclarativeModel.metadata.create_all)
+        await conn.run_sync(BaseModel.metadata.create_all)
 
 
 def init_sync_db() -> None:
     with sync_engine.begin():
-        BaseDeclarativeModel.metadata.create_all(sync_engine)
+        BaseModel.metadata.create_all(sync_engine)
 
 
 async def get_async_session() -> AsyncGenerator[AsyncSession]:
