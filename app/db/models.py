@@ -1,13 +1,13 @@
 from datetime import UTC, datetime
+from typing import Any
 
 from sqlalchemy import (
     JSON,
-    Column,
     DateTime,
     Index,
     String,
 )
-from sqlalchemy.orm import DeclarativeBase
+from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column
 
 
 class BaseModel(DeclarativeBase):
@@ -17,13 +17,15 @@ class BaseModel(DeclarativeBase):
 class Event(BaseModel):
     __tablename__ = "events"
 
-    event_id = Column(String, primary_key=True)
-    tenant_id = Column(String, nullable=False)
-    source = Column(String)
-    event_type = Column(String)
-    timestamp = Column(DateTime, nullable=False)
-    payload = Column(JSON)
-    created_at = Column(DateTime, default=lambda: datetime.now(UTC))
+    event_id: Mapped[str] = mapped_column(String, primary_key=True)
+    tenant_id: Mapped[str] = mapped_column(String, nullable=False)
+    source: Mapped[str | None] = mapped_column(String, nullable=True)
+    event_type: Mapped[str | None] = mapped_column(String, nullable=True)
+    timestamp: Mapped[datetime] = mapped_column(DateTime, nullable=False)
+    payload: Mapped[dict[str, Any] | None] = mapped_column(JSON, nullable=True)
+    created_at: Mapped[datetime] = mapped_column(
+        DateTime, default=lambda: datetime.now(UTC)
+    )
 
     __table_args__ = (
         Index("idx_events_tenant_time", "tenant_id", "timestamp"),
