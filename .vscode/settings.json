@@ -15,14 +15,22 @@
   "cSpell.words": [
     "addopts",
     "ASGI",
+    "asyncio",
+    "asyncpg",
     "Encryptor",
+    "fastapi",
     "Fernet",
+    "httpx",
     "mypy",
+    "psycopg",
+    "pydantic",
     "pytest",
     "sessionmaker",
     "Slowapi",
+    "sqlalchemy",
     "subclassing",
     "superadmin",
-    "testpaths"
+    "testpaths",
+    "uvicorn"
   ]
 }
