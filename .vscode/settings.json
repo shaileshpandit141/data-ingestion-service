@@ -32,6 +32,7 @@
     "subclassing",
     "superadmin",
     "testpaths",
-    "uvicorn"
+    "uvicorn",
+    "venv"
   ]
 }
