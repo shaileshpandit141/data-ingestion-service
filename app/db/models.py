@@ -60,3 +60,17 @@ class Aggregate(BaseModel):
             "event_type",
         ),
     )
+
+
+class AggregationState(BaseModel):
+    __tablename__ = "aggregation_state"
+
+    id: Mapped[str] = mapped_column(
+        String,
+        primary_key=True,
+        default="default",
+    )
+
+    last_processed_at: Mapped[datetime | None] = mapped_column(
+        DateTime(timezone=True), nullable=True
+    )
