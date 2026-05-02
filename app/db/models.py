@@ -42,14 +42,14 @@ class Aggregate(BaseModel):
     __tablename__ = "aggregates"
 
     tenant_id: Mapped[str] = mapped_column(String)
-    bucket_start: Mapped[datetime] = mapped_column(DateTime)
+    bucket_start: Mapped[datetime] = mapped_column(DateTime(timezone=True))
     bucket_size: Mapped[str] = mapped_column(String)  # minute/hour
     source: Mapped[str] = mapped_column(String)
     event_type: Mapped[str] = mapped_column(String)
 
     count: Mapped[int] = mapped_column(Integer)
-    first_seen: Mapped[datetime] = mapped_column(DateTime)
-    last_seen: Mapped[datetime] = mapped_column(DateTime)
+    first_seen: Mapped[datetime] = mapped_column(DateTime(timezone=True))
+    last_seen: Mapped[datetime] = mapped_column(DateTime(timezone=True))
 
     __table_args__ = (
         PrimaryKeyConstraint(

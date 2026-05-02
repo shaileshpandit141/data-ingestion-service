@@ -18,7 +18,7 @@ async def run_aggregation(db: AsyncSession) -> None:
     last_processed = row[0] if row else None
 
     if last_processed is None:
-        last_processed = datetime(1970, 1, 1)
+        last_processed = datetime(1970, 1, 1, tzinfo=UTC)
 
     # Aggregate new events (minute-level)
     aggregation_query = text("""
@@ -34,7 +34,7 @@ async def run_aggregation(db: AsyncSession) -> None:
         )
         SELECT
             tenant_id,
-            date_trunc('minute', timestamp) AS bucket_start,
+            date_trunc('minute', timestamp AT TIME ZONE 'UTC') AS bucket_start,
             'minute',
             source,
             event_type,
