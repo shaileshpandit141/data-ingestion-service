@@ -57,7 +57,4 @@ async def list_events(
 ) -> dict[str, int | Sequence[EventResponse]]:
     events = await get_events(db, params)
 
-    return {
-        "count": len(events),
-        "items": events,  # type: ignore
-    }
+    return {"count": len(events), "items": events}  # type: ignore
