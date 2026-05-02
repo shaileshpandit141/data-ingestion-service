@@ -35,7 +35,7 @@ async def insert_event(db: AsyncSession, event: EventCreate) -> bool:
     result = await db.execute(stmt)
     await db.commit()
 
-    # If rowcount == 0 → duplicate
+    # If rowcount == 0 -> duplicate
     return result.rowcount > 0  # type: ignore
 
 
