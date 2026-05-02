@@ -21,3 +21,14 @@ class EventCreate(BaseModel):
 
 class BulkEventCreate(BaseModel):
     events: list[EventCreate] = Field(..., min_length=1, max_length=5000)
+
+
+class EventQueryParams(BaseModel):
+    tenant_id: str
+    source: str | None = None
+    event_type: str | None = None
+    from_ts: datetime | None = Field(None, alias="from")
+    to_ts: datetime | None = Field(None, alias="to")
+
+    limit: int = Field(50, le=100)
+    offset: int = 0
