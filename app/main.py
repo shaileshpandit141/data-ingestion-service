@@ -4,7 +4,7 @@ from fastapi.responses import RedirectResponse
 
 from .core.config import get_settings
 from .core.lifespan import lifespan
-from .routers import health
+from .routers import events, health
 
 settings = get_settings()
 
@@ -30,3 +30,4 @@ def root(request: Request) -> RedirectResponse:
 
 
 app.include_router(health.router)
+app.include_router(events.router)
