@@ -3,7 +3,7 @@
 **.egg-info**
 **.venv**
 **.git**
-**.env**
 **cache**
 **.coverage**
+.env
 coverage.xml
