@@ -72,7 +72,6 @@ uv run pytest
 
 ## 📈 Future Improvements
 
-* Cursor-based pagination
 * Distributed workers (Kafka/Celery)
 * Redis rate limiting
 * Observability (metrics + tracing)
