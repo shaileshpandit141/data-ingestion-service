@@ -1,7 +1,7 @@
 from datetime import datetime
 from typing import Literal
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, ConfigDict, Field
 
 
 class MetricQueryParams(BaseModel):
@@ -14,10 +14,9 @@ class MetricQueryParams(BaseModel):
 
 
 class MetricResponse(BaseModel):
+    model_config = ConfigDict(from_attributes=True)
+
     tenant_id: str
     bucket_size: str
     source: str | None = None
     event_type: str | None = None
-
-    class Config:
-        from_attributes = True
