@@ -1,7 +1,6 @@
 from collections.abc import AsyncGenerator
 from typing import Any
 
-import pytest
 import pytest_asyncio
 from httpx import ASGITransport, AsyncClient
 from sqlalchemy.ext.asyncio import (
@@ -45,7 +44,7 @@ async def async_session(
             await session.rollback()
 
 
-@pytest.fixture
+@pytest_asyncio.fixture
 async def async_client(async_session: AsyncSession) -> AsyncGenerator[AsyncClient, Any]:
     async def get_async_test_session() -> AsyncGenerator[AsyncSession, Any]:
         yield async_session
